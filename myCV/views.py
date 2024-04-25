@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from myCV.models import GeneralSetting, ImageSetting, Skill, Experience
+from myCV.models import GeneralSetting, ImageSetting, Skill, Experience, Education
 
 # Create your views here.
 def index(request):
@@ -23,7 +23,10 @@ def index(request):
     skills = Skill.objects.all()
 
     # Experience
-    experiences = Experience.objects.all()
+    experiences = Experience.objects.all().order_by("start_date")
+
+    # Education
+    educations = Education.objects.all().order_by("start_date")
 
     context = {
         "site_title": site_title,
@@ -39,6 +42,7 @@ def index(request):
         "site_favicon": site_favicon,
         "skills": skills,
         "experiences": experiences,
+        "educations": educations,
     }
 
     return render(request, "index.html", context=context)
