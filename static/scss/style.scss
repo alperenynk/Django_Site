@@ -1,93 +1,29 @@
-/*----------------------------------------------------
-@File: Default Styles
-@Author: Rocky Ahmed
-@URL: http://wethemez.com
-Author E-mail: rockybd1995@gmail.com
-
-This file contains the styling for the actual theme, this
-is the file you need to edit to change the look of the
-theme.
----------------------------------------------------- */
-
-/*=====================================================================
-@Template Name: Builder Construction 
-@Author: Rocky Ahmed
-@Developed By: Rocky Ahmed
-@Developer URL: http://rocky.wethemez.com
-Author E-mail: rockybd1995@gmail.com
-
-@Default Styles
-
-Table of Content:
-01/ Variables
-02/ predefin
-03/ header
-04/ button
-05/ banner
-06/ breadcrumb
-07/ about
-08/ team
-09/ project 
-10/ price 
-11/ team 
-12/ blog 
-13/ video  
-14/ features  
-15/ career  
-16/ contact 
-17/ footer
-
-=====================================================================*/ 
-
-/*----------------------------------------------------*/
+/*
+* Template Name: Space
+* Template Author: Untree.co
+* Author URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/
+@import "functions";
 @import "variables";
-/*---------------------------------------------------- */ 
+@import "mixins";
 
-/*----------------------------------------------------*/
-@import "predefine";
-/*---------------------------------------------------- */
+$primary: #0389ff;
+$secondary: #000000;
+$black: #000000;
+$white: #ffffff;
+$grey: #5b5656;
+$yellow: #ffeb00;
+$heading_color: #dddde6;
+$text_light_color: #b2b2b8;
+$bg_color: #37373f;
+$font-family: 'PT Mono',  monospace;
+$font-family-heading: 'Montserrat', sans-serif;
+$font-family-sans-serif: $font-family;
 
-/*----------------------------------------------------*/
-@import "header";
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
-@import "breadcrumb";
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
-@import "blog";
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
-@import "contact";
-/*---------------------------------------------------- */ 
-
-/*----------------------------------------------------*/
-@import "elements";
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
-@import "button";
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
-@import "feature";
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
-@import "gallery";
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
-@import "testimonials";
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
-@import "footer";
-/*---------------------------------------------------- */
-
-
-
-
-
+@import 'site-base';
+@import 'site-navbar';
+@import 'site-blocks';
+@import 'site-isotope';
+@import 'site-elements';
+@import 'site-footer';
