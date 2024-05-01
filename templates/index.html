@@ -3,96 +3,102 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% include "includes/head.html" with title="Alperen YANIK" %}
+{% include "includes/head.html" %}
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
 {% include "includes/navbar.html" %}
 
-    <!-- page header -->
-    <header id="home" class="header">
-        <div class="overlay"></div>
-        <div class="header-content container">
-            <h1 class="header-title">
-                <span class="up">HI!</span>
-                <span class="down">I am John Doe</span>
-            </h1>
-            <p class="header-subtitle">FRONTEND WEB DESIGNER</p>
+<!-- page header -->
+<header id="home" class="header">
+    <div class="overlay"></div>
+    <div class="header-content container">
+        <h1 class="header-title">
+            <span class="up">HI!</span>
+            <span class="down">I am {{ home_banner_name }}</span>
+        </h1>
+        <p class="header-subtitle">{{ home_banner_title }}</p>
+    </div>
+</header><!-- end of page header -->
+
+<section class="section" id="about">
+    <div class="container text-center">
+        <div class="about">
+            <div class="about-img-holder">
+                <img src="{% get_media_prefix %}imgs/man.png" class="about-img"
+                     alt="Resim">
+            </div>
+            <div class="about-caption">
+                <p class="section-subtitle">Who Am I ?</p>
+                <h2 class="section-title mb-3">About Me</h2>
+                <p>
+                    {{ about_myself_welcome }}
+                </p>
+                <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
+            </div>
         </div>
-    </header><!-- end of page header -->
+    </div>
+</section>
 
-    <!-- about section -->
-    <section class="section pt-0" id="about">
-        <!-- container -->
-        <div class="container text-center">
-            <!-- about wrapper -->
-            <div class="about">
-                <div class="about-img-holder">
-                    <img src="{% get_media_prefix %}imgs/man.png" class="about-img"
-                        alt="Resim Aciklama">
-                </div>
-                <div class="about-caption">
-                    <p class="section-subtitle">Who Am I ?</p>
-                    <h2 class="section-title mb-3">About Me</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae aliquid ad provident aut
-                        fuga animi soluta quae eos non cupiditate voluptates dolorem, doloremque quos dicta quibusdam
-                        impedit iure nemo a iste
-                        <br>culpa! Quasi quibusdam hic recusandae delectus velit officiis explicabo voluptatibus! Nemo
-                        esse similique, voluptates labore distinctio, placeat explicabo facilis molestias, blanditiis
-                        culpa iusto voluptatem ratione eligendi a, quia temporibus velit vero ipsa sint ex voluptatum
-                        expedita aliquid! Debitis, nam!
-                    </p>
-                    <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
-                </div>
-            </div><!-- end of about wrapper -->
-        </div><!-- end of container -->
-    </section> <!-- end of about section -->
+<!-- skill section -->
+<section class="section" id="skills">
+    <div class="container text-center">
+        <div>
+            <div>
+                <p class="section-subtitle">What I'm Good At ?</p>
+                <h2 class="section-title mb-6" style="text-align: center">My Skills</h2>
+                <p>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae dolores earum maxime quia veritatis! Ab animi aut, cum cupiditate eum in magnam nostrum, possimus, quam repudiandae ullam unde vel.</span><span>A, aliquam aliquid architecto asperiores cum, dicta ea esse et facilis iusto quae saepe suscipit temporibus. Asperiores cupiditate enim facere iusto magni nam nemo odio saepe voluptatem voluptatum. Facilis, ipsa!</span><span>Ab cum ipsum laborum molestias mollitia nesciunt quaerat quam recusandae! Adipisci amet debitis dolor dolore, dolorum illum placeat reiciendis reprehenderit temporibus totam. Doloremque illum inventore labore natus quisquam ratione sequi?</span><span>Aspernatur culpa ea earum esse fuga impedit in maiores quaerat quis quos, reiciendis sunt vero voluptatem. Est perferendis recusandae sunt voluptates. Aperiam at minus necessitatibus nemo, perferendis qui totam veritatis.</span><span>Aspernatur beatae consectetur debitis, deleniti eaque iusto maxime minima, natus nostrum placeat quo rem sed temporibus veniam voluptate. Cumque dicta est fuga incidunt minima nihil quaerat quas, repellat ullam voluptas!</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- testimonial section -->
-    <section class="section" id="testmonial">
-        <div class="container text-center">
-            <p class="section-subtitle">What Think Client About Me ?</p>
-            <h6 class="section-title mb-6">Testmonial</h6>
+<!-- testimonial section -->
+<section class="section" id="testmonial">
+    <div class="container text-center">
+        <p class="section-subtitle">What Clients Think About Me ?</p>
+        <h6 class="section-title mb-6">Testmonial</h6>
 
-            <!-- row -->
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <div class="testimonial-card-img-holder">
-                            <img src="{% get_media_prefix %}imgs/avatar2.jpg" class="testimonial-card-img"
-                                alt="Resim Aciklama">
-                        </div>
-                        <div class="testimonial-card-body">
-                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis
-                                adipisci nihil.</p>
-                            <h6 class="testimonial-card-title">Emily Reb</h6>
-                        </div>
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-card-img-holder">
+                        <img src="{% get_media_prefix %}imgs/avatar2.jpg" class="testimonial-card-img"
+                             alt="Resim">
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <div class="testimonial-card-img-holder">
-                            <img src="{% get_media_prefix %}imgs/avatar3.jpg" class="testimonial-card-img"
-                                alt="Resim Aciklama">
-                        </div>
-                        <div class="testimonial-card-body">
-                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis
-                                adipisci nihil.</p>
-                            <h6 class="testimonial-card-title">Emily Reb</h6>
-                        </div>
+                    <div class="testimonial-card-body">
+                        <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis
+                            adipisci nihil.</p>
+                        <h6 class="testimonial-card-title">Emily Reb</h6>
                     </div>
                 </div>
             </div>
-        </div> <!-- end of container -->
-    </section> <!-- end of testimonial section -->
+            <div class="col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-card-img-holder">
+                        <img src="{% get_media_prefix %}imgs/avatar3.jpg" class="testimonial-card-img"
+                             alt="Resim">
+                    </div>
+                    <div class="testimonial-card-body">
+                        <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis
+                            adipisci nihil.</p>
+                        <h6 class="testimonial-card-title">Emily Reb</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end of container -->
+</section> <!-- end of testimonial section -->
 
 <!-- contact section -->
 <section class="section" id="contact">
     <div class="container text-center">
-        <p class="section-subtitle">How can you communicate?</p>
+        <p class="section-subtitle">How Can You Communicate?</p>
         <h6 class="section-title mb-5">Contact Me</h6>
         <!-- contact form -->
         <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
@@ -114,7 +120,6 @@
         </form><!-- end of contact form -->
     </div><!-- end of container -->
 </section><!-- end of contact section -->
-
 
 {% include "includes/footer.html" %}
 
