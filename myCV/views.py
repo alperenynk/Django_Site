@@ -14,6 +14,8 @@ def index(request):
     about_myself_welcome = GeneralSetting.objects.get(name="about_myself_welcome").parameter
     testimonial1_name = GeneralSetting.objects.get(name="testimonial1_name").parameter
     testimonial2_name = GeneralSetting.objects.get(name="testimonial2_name").parameter
+    testimonial1_think = GeneralSetting.objects.get(name="testimonial1_think").parameter
+    testimonial2_think = GeneralSetting.objects.get(name="testimonial2_think").parameter
 
     # Image
     site_favicon = ImageSetting.objects.get(name="site_favicon").file
@@ -35,6 +37,8 @@ def index(request):
         "testimonial2_image": testimonial2_image,
         "testimonial1_name": testimonial1_name,
         "testimonial2_name": testimonial2_name,
+        "testimonial1_think": testimonial1_think,
+        "testimonial2_think": testimonial2_think,
     }
 
     return render(request, "index.html", context=context)
