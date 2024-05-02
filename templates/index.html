@@ -25,8 +25,8 @@
     <div class="container text-center">
         <div class="about">
             <div class="about-img-holder">
-                <img src="{% get_media_prefix %}imgs/man.png" class="about-img"
-                     alt="Resim">
+                <img src="{{ home_banner_image.url }}" class="about-img"
+                     alt="">
             </div>
             <div class="about-caption">
                 <p class="section-subtitle">Who Am I ?</p>
@@ -34,6 +34,8 @@
                 <p>
                     {{ about_myself_welcome }}
                 </p>
+                    <p><a href="mailto:alperenyanik@hotmail.com">Mail</a></p>
+                    <p><a href="">Number</a></p>
                 <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
             </div>
         </div>
@@ -59,35 +61,35 @@
 <section class="section" id="testmonial">
     <div class="container text-center">
         <p class="section-subtitle">What Clients Think About Me ?</p>
-        <h6 class="section-title mb-6">Testmonial</h6>
+        <h6 class="section-title mb-6">Testimonial</h6>
 
         <!-- row -->
         <div class="row">
             <div class="col-md-6">
                 <div class="testimonial-card">
                     <div class="testimonial-card-img-holder">
-                        <img src="{% get_media_prefix %}imgs/avatar2.jpg" class="testimonial-card-img"
-                             alt="Resim">
+                        <img src="{{ testimonial2_image.url }}" class="testimonial-card-img"
+                             alt="">
                     </div>
                     <div class="testimonial-card-body">
                         <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis
                             adipisci nihil.</p>
-                        <h6 class="testimonial-card-title">Emily Reb</h6>
+                        <h6 class="testimonial-card-title">{{ testimonial2_name }}</h6>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="testimonial-card">
                     <div class="testimonial-card-img-holder">
-                        <img src="{% get_media_prefix %}imgs/avatar3.jpg" class="testimonial-card-img"
-                             alt="Resim">
+                        <img src="{{ testimonial1_image.url }}" class="testimonial-card-img"
+                             alt="">
                     </div>
                     <div class="testimonial-card-body">
                         <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis
                             adipisci nihil.</p>
-                        <h6 class="testimonial-card-title">Emily Reb</h6>
+                        <h6 class="testimonial-card-title">{{ testimonial1_name }}</h6>
                     </div>
                 </div>
             </div>
