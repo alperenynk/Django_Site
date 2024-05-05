@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from myCV.models import GeneralSetting, ImageSetting
+from myCV.models import GeneralSetting, ImageSetting, Skill
 
 # Create your views here.
 def index(request):
@@ -23,6 +23,9 @@ def index(request):
     testimonial1_image = ImageSetting.objects.get(name="testimonial1_image").file
     testimonial2_image = ImageSetting.objects.get(name="testimonial2_image").file
 
+    # Skill
+    skills = Skill.objects.all()
+
     context = {
         "site_title": site_title,
         "site_keywords": site_keywords,
@@ -39,6 +42,7 @@ def index(request):
         "testimonial2_name": testimonial2_name,
         "testimonial1_think": testimonial1_think,
         "testimonial2_think": testimonial2_think,
+        "skills": skills,
     }
 
     return render(request, "index.html", context=context)
