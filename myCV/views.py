@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from myCV.models import GeneralSetting, ImageSetting, Skill
+from myCV.models import GeneralSetting, ImageSetting, Skill, SocialMedia
 
 # Create your views here.
 def index(request):
@@ -10,7 +10,6 @@ def index(request):
     site_description = GeneralSetting.objects.get(name="site_description").parameter
     home_banner_title = GeneralSetting.objects.get(name="home_banner_title").parameter
     home_banner_name = GeneralSetting.objects.get(name="home_banner_name").parameter
-    home_banner_description = GeneralSetting.objects.get(name="home_banner_description").parameter
     about_myself_welcome = GeneralSetting.objects.get(name="about_myself_welcome").parameter
     testimonial1_name = GeneralSetting.objects.get(name="testimonial1_name").parameter
     testimonial2_name = GeneralSetting.objects.get(name="testimonial2_name").parameter
@@ -26,13 +25,15 @@ def index(request):
     # Skill
     skills = Skill.objects.all()
 
+    # Social Media
+    social_medias = SocialMedia.objects.all()
+
     context = {
         "site_title": site_title,
         "site_keywords": site_keywords,
         "site_description": site_description,
         "home_banner_title": home_banner_title,
         "home_banner_name": home_banner_name,
-        "home_banner_description": home_banner_description,
         "about_myself_welcome": about_myself_welcome,
         "site_favicon": site_favicon,
         "home_banner_image": home_banner_image,
@@ -43,6 +44,7 @@ def index(request):
         "testimonial1_think": testimonial1_think,
         "testimonial2_think": testimonial2_think,
         "skills": skills,
+        "social_medias": social_medias,
     }
 
     return render(request, "index.html", context=context)
