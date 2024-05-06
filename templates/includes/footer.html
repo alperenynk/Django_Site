@@ -10,7 +10,7 @@
         </p>
         <div class="social-links text-right m-auto ml-sm-auto">
             {% for social in social_medias %}
-                <a href="{{ social.url }}" class="link">{{ social.icon }}</a>
+                <a href="{{ social.link }}" target="_blank" class="link">{{ social.icon|safe }}</a>
             {% endfor %}
         </div>
     </footer>

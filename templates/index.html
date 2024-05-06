@@ -34,9 +34,10 @@
                 <p>
                     {{ about_myself_welcome }}
                 </p>
-                <p><a href="mailto:alperenyanik@hotmail.com">Mail</a></p>
-                <p><a href="tel:+905422400181">Number</a></p>
-                <p><a href="javascript:void(0)">Home</a></p>
+                <p><a href="mailto:alperenyanik@hotmail.com"><i class="fa-solid fa-envelope fa-fade">
+                    alperenyanik@hotmail.com</i></a></p>
+                <p><a href="tel:+905422400181"><i class="fa-solid fa-phone fa-fade"> +90 (542) 240 0181</i></a></p>
+                <p><a href="javascript:void(0)"><i class="fa-solid fa-house fa-fade"> İstanbul / Kartal</i></a></p>
                 <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
             </div>
         </div>
@@ -52,21 +53,20 @@
                 <h2 class="section-title mb-6" style="text-align: center">My Skills</h2>
 
 
-
                 <div class="row">
 
                     {% for skill in skills %}
-                    <div class="col-md-6">
-                        <p style="margin-top: 30px; font-weight: bold;">{{ skill.name }} {{ skill.percentage }}%</p>
-                        <div class="progress" style="height: 15px;">
-                            <div class="progress-bar" style="width: {{ skill.percentage }}%;" role="progressbar" aria-valuenow="{{ skill.percentage }}" aria-valuemin="0"
-                                 aria-valuemax="100"></div>
+                        <div class="col-md-6">
+                            <p style="margin-top: 30px; font-weight: bold;">{{ skill.name }} {{ skill.percentage }}%</p>
+                            <div class="progress" style="height: 15px;">
+                                <div class="progress-bar" style="width: {{ skill.percentage }}%;" role="progressbar"
+                                     aria-valuenow="{{ skill.percentage }}" aria-valuemin="0"
+                                     aria-valuemax="100"></div>
+                            </div>
                         </div>
-                    </div>
                     {% endfor %}
 
                 </div>
-
 
 
             </div>
@@ -75,13 +75,14 @@
 </section>
 
 <!-- testimonial section -->
-<section class="section" id="testmonial">
+<section class="section" id="testimonial">
     <div class="container text-center">
         <p class="section-subtitle">What Clients Think About Me ?</p>
         <h6 class="section-title mb-6">Testimonial</h6>
 
         <!-- row -->
         <div class="row">
+
             <div class="col-md-6">
                 <div class="testimonial-card">
                     <div class="testimonial-card-img-holder">
@@ -94,6 +95,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-6">
                 <div class="testimonial-card">
                     <div class="testimonial-card-img-holder">
@@ -106,6 +108,33 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-card-img-holder">
+                        <img src="{{ testimonial3_image.url }}" class="testimonial-card-img"
+                             alt="">
+                    </div>
+                    <div class="testimonial-card-body">
+                        <p class="testimonial-card-subtitle">{{ testimonial3_think }}</p>
+                        <h6 class="testimonial-card-title">{{ testimonial3_name }}</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-card-img-holder">
+                        <img src="{{ testimonial4_image.url }}" class="testimonial-card-img"
+                             alt="">
+                    </div>
+                    <div class="testimonial-card-body">
+                        <p class="testimonial-card-subtitle">{{ testimonial4_think }}</p>
+                        <h6 class="testimonial-card-title">{{ testimonial4_name }}</h6>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div> <!-- end of container -->
 </section> <!-- end of testimonial section -->

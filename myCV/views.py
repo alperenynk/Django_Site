@@ -13,14 +13,20 @@ def index(request):
     about_myself_welcome = GeneralSetting.objects.get(name="about_myself_welcome").parameter
     testimonial1_name = GeneralSetting.objects.get(name="testimonial1_name").parameter
     testimonial2_name = GeneralSetting.objects.get(name="testimonial2_name").parameter
+    testimonial3_name = GeneralSetting.objects.get(name="testimonial3_name").parameter
+    testimonial4_name = GeneralSetting.objects.get(name="testimonial4_name").parameter
     testimonial1_think = GeneralSetting.objects.get(name="testimonial1_think").parameter
     testimonial2_think = GeneralSetting.objects.get(name="testimonial2_think").parameter
+    testimonial3_think = GeneralSetting.objects.get(name="testimonial3_think").parameter
+    testimonial4_think = GeneralSetting.objects.get(name="testimonial4_think").parameter
 
     # Image
     site_favicon = ImageSetting.objects.get(name="site_favicon").file
     home_banner_image = ImageSetting.objects.get(name="home_banner_image").file
     testimonial1_image = ImageSetting.objects.get(name="testimonial1_image").file
     testimonial2_image = ImageSetting.objects.get(name="testimonial2_image").file
+    testimonial3_image = ImageSetting.objects.get(name="testimonial3_image").file
+    testimonial4_image = ImageSetting.objects.get(name="testimonial4_image").file
 
     # Skill
     skills = Skill.objects.all()
@@ -39,10 +45,16 @@ def index(request):
         "home_banner_image": home_banner_image,
         "testimonial1_image": testimonial1_image,
         "testimonial2_image": testimonial2_image,
+        "testimonial3_image": testimonial3_image,
+        "testimonial4_image": testimonial4_image,
         "testimonial1_name": testimonial1_name,
         "testimonial2_name": testimonial2_name,
+        "testimonial3_name": testimonial3_name,
+        "testimonial4_name": testimonial4_name,
         "testimonial1_think": testimonial1_think,
         "testimonial2_think": testimonial2_think,
+        "testimonial3_think": testimonial3_think,
+        "testimonial4_think": testimonial4_think,
         "skills": skills,
         "social_medias": social_medias,
     }
