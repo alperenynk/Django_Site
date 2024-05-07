@@ -15,10 +15,14 @@ def index(request):
     testimonial2_name = GeneralSetting.objects.get(name="testimonial2_name").parameter
     testimonial3_name = GeneralSetting.objects.get(name="testimonial3_name").parameter
     testimonial4_name = GeneralSetting.objects.get(name="testimonial4_name").parameter
+    testimonial5_name = GeneralSetting.objects.get(name="testimonial5_name").parameter
+    testimonial6_name = GeneralSetting.objects.get(name="testimonial6_name").parameter
     testimonial1_think = GeneralSetting.objects.get(name="testimonial1_think").parameter
     testimonial2_think = GeneralSetting.objects.get(name="testimonial2_think").parameter
     testimonial3_think = GeneralSetting.objects.get(name="testimonial3_think").parameter
     testimonial4_think = GeneralSetting.objects.get(name="testimonial4_think").parameter
+    testimonial5_think = GeneralSetting.objects.get(name="testimonial5_think").parameter
+    testimonial6_think = GeneralSetting.objects.get(name="testimonial6_think").parameter
 
     # Image
     site_favicon = ImageSetting.objects.get(name="site_favicon").file
@@ -27,6 +31,8 @@ def index(request):
     testimonial2_image = ImageSetting.objects.get(name="testimonial2_image").file
     testimonial3_image = ImageSetting.objects.get(name="testimonial3_image").file
     testimonial4_image = ImageSetting.objects.get(name="testimonial4_image").file
+    testimonial5_image = ImageSetting.objects.get(name="testimonial5_image").file
+    testimonial6_image = ImageSetting.objects.get(name="testimonial6_image").file
 
     # Skill
     skills = Skill.objects.all()
@@ -47,14 +53,20 @@ def index(request):
         "testimonial2_image": testimonial2_image,
         "testimonial3_image": testimonial3_image,
         "testimonial4_image": testimonial4_image,
+        "testimonial5_image": testimonial5_image,
+        "testimonial6_image": testimonial6_image,
         "testimonial1_name": testimonial1_name,
         "testimonial2_name": testimonial2_name,
         "testimonial3_name": testimonial3_name,
         "testimonial4_name": testimonial4_name,
+        "testimonial5_name": testimonial5_name,
+        "testimonial6_name": testimonial6_name,
         "testimonial1_think": testimonial1_think,
         "testimonial2_think": testimonial2_think,
         "testimonial3_think": testimonial3_think,
         "testimonial4_think": testimonial4_think,
+        "testimonial5_think": testimonial5_think,
+        "testimonial6_think": testimonial6_think,
         "skills": skills,
         "social_medias": social_medias,
     }
