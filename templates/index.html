@@ -73,7 +73,7 @@
                 <p id="p4">{{ education_uni }}</p>
                 <p><a href="mailto:alperenyanik@hotmail.com"><i class="fa-solid fa-envelope"></i>
                     {{ mail }}</a></p>
-                <p><a href="tel:+905422400181"><i class="fa-solid fa-phone"></i> {{ number }}</a></p>
+                <p><a href="tel:+905422400181"><i class="fa-solid fa-phone fa-shake"></i> {{ number }}</a></p>
                 <p><a href="javascript:void(0)"><i class="fa-solid fa-house"></i> {{ location }}</a></p>
                 {#                <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>#}
             </div>
@@ -210,7 +210,7 @@
         <p class="section-subtitle" id="p7">How Can You Communicate?</p>
         <h6 class="section-title mb-5">Contact Me <i class="fa-solid fa-phone fa-shake"></i></h6>
         <!-- contact form -->
-        <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
+        <form class="contact-form col-md-10 col-lg-8 m-auto" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
             <div class="form-row">
                 <div class="form-group col-sm-6">
                     <input type="text" size="50" class="form-control" placeholder="Your Name" required>

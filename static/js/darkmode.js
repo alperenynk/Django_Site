@@ -8,6 +8,7 @@ const p4 = document.querySelector("#p4");
 const p5 = document.querySelector("#p5");
 const p6 = document.querySelector("#p6");
 const p7 = document.querySelector("#p7");
+const p8 = document.querySelector("#p8");
 
 darkButton.addEventListener("click", () => {
     darkButton.classList.toggle("dark");
@@ -22,6 +23,7 @@ darkButton.addEventListener("click", () => {
         p5.style.color = "#f0f0f0";
         p6.style.color = "#f0f0f0";
         p7.style.color = "#f0f0f0";
+        p8.style.color = "#f0f0f0";
     } else {
         body.style.backgroundColor = "#fff";
         body.style.color = "#212529";
@@ -33,5 +35,6 @@ darkButton.addEventListener("click", () => {
         p5.style.color = "#212529";
         p6.style.color = "#212529";
         p7.style.color = "#212529";
+        p8.style.color = "#212529";
     }
 });
