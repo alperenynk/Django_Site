@@ -11,6 +11,11 @@ def index(request):
     home_banner_title = GeneralSetting.objects.get(name="home_banner_title").parameter
     home_banner_name = GeneralSetting.objects.get(name="home_banner_name").parameter
     about_myself_welcome = GeneralSetting.objects.get(name="about_myself_welcome").parameter
+    education_hs = GeneralSetting.objects.get(name="education_hs").parameter
+    education_uni = GeneralSetting.objects.get(name="education_uni").parameter
+    mail = GeneralSetting.objects.get(name="mail").parameter
+    number = GeneralSetting.objects.get(name="number").parameter
+    location = GeneralSetting.objects.get(name="location").parameter
     testimonial1_name = GeneralSetting.objects.get(name="testimonial1_name").parameter
     testimonial2_name = GeneralSetting.objects.get(name="testimonial2_name").parameter
     testimonial3_name = GeneralSetting.objects.get(name="testimonial3_name").parameter
@@ -47,6 +52,11 @@ def index(request):
         "home_banner_title": home_banner_title,
         "home_banner_name": home_banner_name,
         "about_myself_welcome": about_myself_welcome,
+        "education_hs": education_hs,
+        "education_uni": education_uni,
+        "mail": mail,
+        "number": number,
+        "location": location,
         "site_favicon": site_favicon,
         "home_banner_image": home_banner_image,
         "testimonial1_image": testimonial1_image,

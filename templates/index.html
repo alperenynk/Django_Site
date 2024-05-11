@@ -21,6 +21,40 @@
     </div>
 </header><!-- end of page header -->
 
+<label class="bb8-toggle">
+    <input class="bb8-toggle__checkbox" type="checkbox">
+    <div class="bb8-toggle__container">
+        <div class="bb8-toggle__scenery">
+            <div class="bb8-toggle__star"></div>
+            <div class="bb8-toggle__star"></div>
+            <div class="bb8-toggle__star"></div>
+            <div class="bb8-toggle__star"></div>
+            <div class="bb8-toggle__star"></div>
+            <div class="bb8-toggle__star"></div>
+            <div class="bb8-toggle__star"></div>
+            <div class="tatto-1"></div>
+            <div class="tatto-2"></div>
+            <div class="gomrassen"></div>
+            <div class="hermes"></div>
+            <div class="chenini"></div>
+            <div class="bb8-toggle__cloud"></div>
+            <div class="bb8-toggle__cloud"></div>
+            <div class="bb8-toggle__cloud"></div>
+        </div>
+        <div class="bb8">
+            <div class="bb8__head-container">
+                <div class="bb8__antenna"></div>
+                <div class="bb8__antenna"></div>
+                <div class="bb8__head"></div>
+            </div>
+            <div class="bb8__body"></div>
+        </div>
+        <div class="artificial__hidden">
+            <div class="bb8__shadow"></div>
+        </div>
+    </div>
+</label>
+
 <section class="section" id="about">
     <div class="container text-center">
         <div class="about">
@@ -29,15 +63,19 @@
                      alt="">
             </div>
             <div class="about-caption">
-                <p class="section-subtitle">Who Am I ?</p>
+                <p class="section-subtitle" id="p1">Who Am I ?</p>
                 <h2 class="section-title mb-3">About Me <i class="fa-solid fa-user fa-flip"></i></h2>
-                <p>
-                    {{ about_myself_welcome }}
+                <p id="p2">
+                    {{ about_myself_welcome }}                
                 </p>
-                <p class="fa-fade"><a href="mailto:alperenyanik@hotmail.com"><i class="fa-solid fa-envelope fa-fade"></i> alperenyanik@hotmail.com</a></p>
-                <p class="fa-fade"><a href="tel:+905422400181"><i class="fa-solid fa-phone fa-fade"></i> +90 (542) 240 0181</a></p>
-                <p class="fa-fade"><a href="javascript:void(0)"><i class="fa-solid fa-house fa-fade"></i> İstanbul / Kartal</a></p>
-                <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
+                <h2 class="section-title mb-3">Education <i class="fa-solid fa-school"></i></h2>
+                <p id="p3">{{ education_hs }}</p>
+                <p id="p4">{{ education_uni }}</p>
+                <p><a href="mailto:alperenyanik@hotmail.com"><i class="fa-solid fa-envelope"></i>
+                    {{ mail }}</a></p>
+                <p><a href="tel:+905422400181"><i class="fa-solid fa-phone"></i> {{ number }}</a></p>
+                <p><a href="javascript:void(0)"><i class="fa-solid fa-house"></i> {{ location }}</a></p>
+                {#                <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>#}
             </div>
         </div>
     </div>
@@ -48,8 +86,9 @@
     <div class="container text-center">
         <div>
             <div>
-                <p class="section-subtitle">What I'm Good At ?</p>
-                <h2 class="section-title mb-6" style="text-align: center">My Skills <i class="fa-solid fa-code"></i></h2>
+                <p class="section-subtitle" id="p5">What I'm Good At ?</p>
+                <h2 class="section-title mb-6" style="text-align: center">My Skills <i class="fa-solid fa-code"></i>
+                </h2>
 
 
                 <div class="row">
@@ -76,7 +115,7 @@
 <!-- testimonial section -->
 <section class="section" id="testimonial">
     <div class="container text-center">
-        <p class="section-subtitle">What Clients Think About Me ?</p>
+        <p class="section-subtitle" id="p6">What Clients Think About Me ?</p>
         <h6 class="section-title mb-6">Testimonial <i class="fa-solid fa-handshake fa-bounce"></i></h6>
 
         <!-- row -->
@@ -133,7 +172,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-6">
                 <div class="testimonial-card">
                     <div class="testimonial-card-img-holder">
@@ -142,11 +181,12 @@
                     </div>
                     <div class="testimonial-card-body">
                         <p class="testimonial-card-subtitle">{{ testimonial5_think }}</p>
-                        <h6 class="testimonial-card-title">{{ testimonial5_name }} <i class="fa-solid fa-spider"></i></h6>
+                        <h6 class="testimonial-card-title">{{ testimonial5_name }} <i class="fa-solid fa-spider"></i>
+                        </h6>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-6">
                 <div class="testimonial-card">
                     <div class="testimonial-card-img-holder">
@@ -159,7 +199,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div> <!-- end of container -->
 </section> <!-- end of testimonial section -->
@@ -167,7 +207,7 @@
 <!-- contact section -->
 <section class="section" id="contact">
     <div class="container text-center">
-        <p class="section-subtitle">How Can You Communicate?</p>
+        <p class="section-subtitle" id="p7">How Can You Communicate?</p>
         <h6 class="section-title mb-5">Contact Me <i class="fa-solid fa-phone fa-shake"></i></h6>
         <!-- contact form -->
         <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
