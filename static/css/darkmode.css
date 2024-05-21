@@ -942,3 +942,25 @@
 .bb8:hover .bb8__head::after {
   background-position: 0 0 !important;
 }
+
+/* Başlangıçta renksiz navbar */
+.custom-navbar.affix-top {
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+/* Scroll edildiğinde beyaz arka plan */
+.custom-navbar.affix {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(222, 226, 230, 0.34);
+}
+
+/* Dark mode'da affix-top iken koyu renk */
+.custom-navbar.dark.affix-top {
+    background-color: #222831;
+}
+
+/* Dark mode'da affix iken koyu renk */
+.custom-navbar.dark.affix {
+    background-color: #222831;
+}
