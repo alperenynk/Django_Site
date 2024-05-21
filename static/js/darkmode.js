@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const ThemeWagon = document.querySelector("#p2");
     const footerTexts = document.querySelectorAll(".footer p");
 
+    // Input ve textarea alanlarını seçelim
+    const inputFields = document.querySelectorAll("input, textarea");
+
     function updateNavbarBackground() {
         if (window.scrollY > 0) {
             if (darkButton.classList.contains("dark")) {
@@ -27,8 +30,38 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    function updateInputFieldColors() {
+        if (darkButton.classList.contains("dark")) {
+            inputFields.forEach(input => {
+                input.style.color = "#fff";
+            });
+        } else {
+            inputFields.forEach(input => {
+                input.style.color = "#212529";
+            });
+        }
+    }
+
+    function updatePlaceholderColor() {
+        if (darkButton.classList.contains("dark")) {
+            inputFields.forEach(input => {
+                const placeholderText = input.getAttribute("placeholder");
+                if (placeholderText) {
+                    input.setAttribute("data-placeholder", placeholderText);
+                    input.setAttribute("placeholder", placeholderText.replace("#212529", "#f0f0f0"));
+                }
+            });
+        } else {
+            inputFields.forEach(input => {
+                const placeholderText = input.getAttribute("data-placeholder");
+                if (placeholderText) {
+                    input.setAttribute("placeholder", placeholderText.replace("#f0f0f0", "#212529"));
+                }
+            });
+        }
+    }
+
     darkButton.addEventListener("click", () => {
-        console.log("Button clicked");
         darkButton.classList.toggle("dark");
         if (darkButton.classList.contains("dark")) {
             body.style.backgroundColor = "#222831";
@@ -62,8 +95,12 @@ document.addEventListener("DOMContentLoaded", () => {
             footerTexts.forEach(footerText => footerText.style.color = "#212529");
         }
         updateNavbarBackground();
+        updateInputFieldColors();
+        updatePlaceholderColor(); // Placeholder renklerini güncelle
     });
 
     window.addEventListener("scroll", updateNavbarBackground);
     updateNavbarBackground();
+    updateInputFieldColors(); // Başlangıçta input renklerini güncelle
+    updatePlaceholderColor(); // Başlangıçta placeholder renklerini güncelle
 });
